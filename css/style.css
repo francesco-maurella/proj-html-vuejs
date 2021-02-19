@@ -153,27 +153,41 @@ main {
   border-radius: 50%;
 }
 .jumbotron-images img:not(.jumbo-cover-img) {
+  max-width: 150px;
   position: absolute;
+  transition: 5s;
 }
-.jumbotron-images .jumbo-left-bg {
+.jumbotron .jumbo-left-bg {
   max-width: 135px;
   left: 5%;
 }
-.jumbotron-images .jumbo-left-bg:first-child {
-  top: 28%;
+.jumbotron:hover .jumbo-left-bg:first-child {
+  top: 27%;
 }
-.jumbotron-images .jumbo-left-bg:nth-child(2) {
-  bottom: 28%;
+.jumbotron .jumbo-left-bg:first-child {
+  top: 10%;
 }
-.jumbotron-images .jumbo-right-bg {
-  max-width: 180px;
-  right: 15%;
+.jumbotron:hover .jumbo-left-bg:nth-child(2) {
+  bottom: 27%;
+}
+.jumbotron .jumbo-left-bg:nth-child(2) {
   bottom: 10%;
 }
-.jumbotron-images .jumbo-side-img {
-  max-width: 120px;
-  right: -8%;
+.jumbotron:hover .jumbo-right-bg {
+  bottom: 10%;
+}
+.jumbotron .jumbo-right-bg {
+  right: 15%;
+  bottom: 65%;
+}
+.jumbotron:hover .jumbo-side-img {
   top: 25%;
+}
+.jumbotron .jumbo-side-img {
+  z-index: 11;
+  max-width: 120px;
+  right: 0;
+  top: 60%;
 }
 
 .partners {

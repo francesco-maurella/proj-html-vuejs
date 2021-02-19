@@ -181,34 +181,52 @@ main {
       }
 
       img:not(.jumbo-cover-img) {
+        max-width: 150px;
         position: absolute;
+        transition: 5s;
       }
 
-      .jumbo-left-bg {
-        max-width: 135px;
-        left : 5%;
-      }
+    }
 
-      .jumbo-left-bg:first-child {
-        top: 28%;
-      }
+    .jumbo-left-bg {
+      max-width: 135px;
+      left : 5%;
+    }
 
-      .jumbo-left-bg:nth-child(2) {
-        bottom: 28%;
-      }
+    &:hover .jumbo-left-bg:first-child {
+      top: 27%;
+    }
 
-      .jumbo-right-bg {
-        max-width: 180px;
-        right : 15%;
-        bottom: 10%;
-      }
+    .jumbo-left-bg:first-child{
+      top: 10%;
+    }
 
-      .jumbo-side-img {
-        max-width: 120px;
-        right : -8%;
-        top : 25%;
-      }
+    &:hover .jumbo-left-bg:nth-child(2) {
+      bottom: 27%;
+    }
 
+    .jumbo-left-bg:nth-child(2){
+      bottom: 10%;
+    }
+
+    &:hover .jumbo-right-bg {
+      bottom: 10%;
+    }
+
+    .jumbo-right-bg {
+      right : 15%;
+      bottom: 65%;
+    }
+
+    &:hover .jumbo-side-img {
+      top : 25%;
+    }
+
+    .jumbo-side-img {
+      z-index: 11;
+      max-width: 120px;
+      right : 0;
+      top: 60%;
     }
 
 }
