@@ -25,15 +25,18 @@
   width: 100vw;
   min-height: 100vh;
   max-width: 100%;
+  background-color: #FFFFFF;
+  color: #9EA4A5;
 }
 
 .container {
+  font-family: "Poppins";
+  font-size: 14px;
   width: 100%;
   min-width: 1200px;
   max-width: 1200px;
   margin: auto;
-  font-family: "Poppins";
-  font-size: 14px;
+  line-height: 2em;
 }
 .container li {
   list-style: none;
@@ -46,7 +49,10 @@
 .top-bar {
   background-color: #FFFFFF;
   color: #9EA4A5;
-  box-shadow: 0 10px 10px #F6F3F5;
+  width: 100%;
+  min-height: 70px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
   z-index: 100;
 }
 .top-bar .container, .top-bar-menu {
@@ -103,9 +109,12 @@
 }
 
 /* MAIN BODY */
+main {
+  padding-top: 70px;
+}
+
 .jumbotron {
-  background-color: #FFFFFF;
-  color: #9EA4A5;
+  padding: 25px 0;
 }
 .jumbotron .container {
   display: flex;
@@ -115,7 +124,6 @@
   padding: 25px;
 }
 .jumbotron-description {
-  line-height: 2.1em;
   width: 45%;
 }
 .jumbotron-description > * {
@@ -169,6 +177,78 @@
 }
 
 .partners {
+  padding: 25px 0;
+}
+.partners ul {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+.partners ul li {
+  padding: 0 20px;
+  opacity: 0.6;
+}
+
+.ft-courses {
+  padding: 25px 0;
+  background-color: #F6F3F5;
+  text-align: center;
+}
+.ft-courses .container > h3 {
+  line-height: 1.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.ft-courses .container > h2 {
+  color: #48495F;
+  line-height: 1.8em;
+  font-size: 2.2em;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+.ft-courses-list {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.ft-courses-list-el {
+  display: flex;
+  width: calc(100% / 2);
+  margin: 50px 0;
+}
+.ft-courses-list-el-img {
+  width: 35%;
+  max-width: 170px;
+  max-height: 170px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.ft-courses-list-el-img img {
+  max-height: 100%;
+}
+.ft-courses-list-el-data {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ft-courses-list-el-data h3 {
+  font-size: 1.8em;
+  color: #25AB94;
+  font-weight: bold;
+}
+.ft-courses-list-el-data h3 .txt-xs {
+  font-size: 0.7em;
+}
+.ft-courses-list-el-data h4 {
+  font-size: 1.3em;
+  color: #48495F;
+}
+.ft-courses-list-el-data-description {
+  display: flex;
+  font-weight: 300;
+  font-size: 0.8em;
+}
+.ft-courses-list-el-data-description > * {
+  padding: 0 10px;
 }

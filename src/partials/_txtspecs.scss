@@ -5,7 +5,21 @@ $main-font : 'Poppins';
   font-size: 14px;
 }
 
-@mixin section-title {
+@mixin sect-pretitle {
+  line-height: 1.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@mixin sect-title {
+  color: $col-gunpwd;
+  line-height: 1.8em;
+  font-size : 2.2em;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+@mixin jumbo-title {
   color: $col-gunpwd;
   line-height: 1.2em;
   font-size : 3.1em;
