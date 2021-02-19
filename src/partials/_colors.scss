@@ -1,0 +1,19 @@
+// Colors
+$col-white : #FFFFFF;
+$col-hint : #F6F3F5;
+$col-shadylady : #AEADAE;
+$col-edward : #9EA4A5;
+$col-gunpwd : #48495F;
+$col-outspace : #2C3837;
+$col-junglegreen : #25AB94;
+$col-mountainmd : #1FAD96;
+
+// Backgrounds
+@mixin bg-white {
+  background-color : $col-white;
+  color : $col-edward;
+}
+@mixin bg-mountainmd {
+  background-color : $col-mountainmd;
+  color : $col-white;
+}

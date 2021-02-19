@@ -1,0 +1,209 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap');
+// Fontawesome
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+@import 'partials/_txtspecs.scss';
+@import 'partials/_spaces.scss';
+@import 'partials/_colors.scss';
+
+/* RESET CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* UTILITY CSS */
+.button {
+  @include bg-mountainmd;
+  display: inline-block;
+  margin : 15px 0;
+  padding : 12px 50px;
+  font-size: 0.9em;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* APP CONTAINER */
+.wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  min-width: 1200px;
+  max-width: 1200px;
+  margin: auto;
+  @include main-txt;
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+}
+
+/* / TOP-BAR HEADER */
+.top-bar {
+  @include bg-white;
+  box-shadow: 0 10px 10px $col-hint;
+  z-index: 100;
+
+  .container, &-menu {
+    @include flx-jc-spacebtw;
+    align-items: center;
+  }
+
+  &-logo img {
+    height: 25px;
+  }
+
+  &-menu {
+    font-weight: 500;
+
+    a {
+      color: $col-outspace;
+    }
+
+    &-site, &-user {
+      @include flx;
+    }
+
+    &-site {
+      & > li {
+        @include pdd-25;
+
+          & > a:after {
+            display : inline-block;
+            content : '\f107';
+            font-family: 'FontAwesome';
+            padding: 0 5px;
+          }
+
+      }
+    }
+
+    &-user {
+      & > li {
+        @include flx-ai-center;
+        @include pdd-10;
+      }
+
+      & > li:last-child {
+        background-color: $col-hint;
+        padding-right: 30px;
+        border-radius : 5px;
+        position: relative;
+
+        & > input {
+          max-width: 120px;
+          background-color: transparent;
+          font-family : $main-font;
+          border : 0;
+        }
+
+        & > input:focus {
+          outline: none;
+        }
+
+        .fa-search {
+          color : $col-junglegreen;
+          position: absolute;
+          right : 15px;
+          cursor: pointer;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+/* MAIN BODY */
+.jumbotron {
+  @include bg-white;
+
+    .container {
+      @include flx-ai-center;
+    }
+
+    &-description, &-images {
+      @include pdd-25;
+    }
+
+    &-description {
+      line-height: 2.1em;
+      width: 45%;
+
+        & > * {
+          @include row-distance;
+        }
+
+        h2 {
+          @include section-title;
+        }
+
+        .button {
+            .fa {
+              vertical-align: middle;
+              font-size: 1.3em;
+            }
+        }
+
+    }
+
+    &-images {
+      @include flx-centered;
+      width: 55%;
+      height: 570px;
+      position: relative;
+
+      .jumbo-cover-img {
+        z-index: 10;
+        max-height: 100%;
+        border-radius: 50%;
+      }
+
+      img:not(.jumbo-cover-img) {
+        position: absolute;
+      }
+
+      .jumbo-left-bg {
+        max-width: 135px;
+        left : 5%;
+      }
+
+      .jumbo-left-bg:first-child {
+        top: 28%;
+      }
+
+      .jumbo-left-bg:nth-child(2) {
+        bottom: 28%;
+      }
+
+      .jumbo-right-bg {
+        max-width: 180px;
+        right : 15%;
+        bottom: 10%;
+      }
+
+      .jumbo-side-img {
+        max-width: 120px;
+        right : -8%;
+        top : 25%;
+      }
+
+    }
+
+}
+.partners {
+  @include flx-ai-center;
+}

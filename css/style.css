@@ -1,0 +1,174 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+@charset "UTF-8";
+/* RESET CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* UTILITY CSS */
+.button {
+  background-color: #1FAD96;
+  color: #FFFFFF;
+  display: inline-block;
+  margin: 15px 0;
+  padding: 12px 50px;
+  font-size: 0.9em;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* APP CONTAINER */
+.wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  min-width: 1200px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Poppins";
+  font-size: 14px;
+}
+.container li {
+  list-style: none;
+}
+.container a {
+  text-decoration: none;
+}
+
+/* / TOP-BAR HEADER */
+.top-bar {
+  background-color: #FFFFFF;
+  color: #9EA4A5;
+  box-shadow: 0 10px 10px #F6F3F5;
+  z-index: 100;
+}
+.top-bar .container, .top-bar-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-bar-logo img {
+  height: 25px;
+}
+.top-bar-menu {
+  font-weight: 500;
+}
+.top-bar-menu a {
+  color: #2C3837;
+}
+.top-bar-menu-site, .top-bar-menu-user {
+  display: flex;
+}
+.top-bar-menu-site > li {
+  padding: 25px;
+}
+.top-bar-menu-site > li > a:after {
+  display: inline-block;
+  content: "";
+  font-family: "FontAwesome";
+  padding: 0 5px;
+}
+.top-bar-menu-user > li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.top-bar-menu-user > li:last-child {
+  background-color: #F6F3F5;
+  padding-right: 30px;
+  border-radius: 5px;
+  position: relative;
+}
+.top-bar-menu-user > li:last-child > input {
+  max-width: 120px;
+  background-color: transparent;
+  font-family: "Poppins";
+  border: 0;
+}
+.top-bar-menu-user > li:last-child > input:focus {
+  outline: none;
+}
+.top-bar-menu-user > li:last-child .fa-search {
+  color: #25AB94;
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+
+/* MAIN BODY */
+.jumbotron {
+  background-color: #FFFFFF;
+  color: #9EA4A5;
+}
+.jumbotron .container {
+  display: flex;
+  align-items: center;
+}
+.jumbotron-description, .jumbotron-images {
+  padding: 25px;
+}
+.jumbotron-description {
+  line-height: 2.1em;
+  width: 45%;
+}
+.jumbotron-description > * {
+  margin-bottom: 20px;
+}
+.jumbotron-description h2 {
+  color: #48495F;
+  line-height: 1.2em;
+  font-size: 3.1em;
+  font-weight: bolder;
+}
+.jumbotron-description .button .fa {
+  vertical-align: middle;
+  font-size: 1.3em;
+}
+.jumbotron-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55%;
+  height: 570px;
+  position: relative;
+}
+.jumbotron-images .jumbo-cover-img {
+  z-index: 10;
+  max-height: 100%;
+  border-radius: 50%;
+}
+.jumbotron-images img:not(.jumbo-cover-img) {
+  position: absolute;
+}
+.jumbotron-images .jumbo-left-bg {
+  max-width: 135px;
+  left: 5%;
+}
+.jumbotron-images .jumbo-left-bg:first-child {
+  top: 28%;
+}
+.jumbotron-images .jumbo-left-bg:nth-child(2) {
+  bottom: 28%;
+}
+.jumbotron-images .jumbo-right-bg {
+  max-width: 180px;
+  right: 15%;
+  bottom: 10%;
+}
+.jumbotron-images .jumbo-side-img {
+  max-width: 120px;
+  right: -8%;
+  top: 25%;
+}
+
+.partners {
+  display: flex;
+  align-items: center;
+}

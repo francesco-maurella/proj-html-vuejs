@@ -1,0 +1,36 @@
+//Paddings & Margins
+@mixin pdd-10 {
+  padding : 10px;
+}
+@mixin pdd-25 {
+  padding : 25px;
+}
+@mixin row-distance {
+  margin-bottom: 20px;
+}
+
+// Flexbox
+@mixin flx {
+  display: flex;
+}
+@mixin flx-ai-center {
+  display: flex;
+  align-items: center;
+}
+@mixin flx-jc-center {
+  display: flex;
+  justify-content: center;
+}
+@mixin flx-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flx-jc-spacebtw {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin flx-jc-end {
+  display: flex;
+  justify-content: flex-end;
+}

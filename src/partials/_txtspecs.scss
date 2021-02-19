@@ -1,0 +1,13 @@
+$main-font : 'Poppins';
+
+@mixin main-txt {
+  font-family: $main-font;
+  font-size: 14px;
+}
+
+@mixin section-title {
+  color: $col-gunpwd;
+  line-height: 1.2em;
+  font-size : 3.1em;
+  font-weight: bolder;
+}
