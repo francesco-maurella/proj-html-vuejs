@@ -293,6 +293,7 @@ main {
 
 .tutor-program {
   padding: 70px 0;
+  border-bottom-right-radius: 200px;
 }
 .tutor-program .container > * {
   margin-bottom: 20px;
@@ -319,6 +320,13 @@ main {
   color: #9EA4A5;
 }
 
+#videospace {
+  background-color: #EBEBEB;
+}
+#videospace .rounded-border-effect {
+  background-color: #FFFFFF;
+  border-bottom-right-radius: 50%;
+}
 #videospace .link-arrow {
   color: #1FAD96;
 }
@@ -326,6 +334,17 @@ main {
 .review {
   padding: 70px 0;
   background-color: #EBEBEB;
+}
+.review:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #EBEBEB;
+  z-index: -10;
+  opacity: 0.5;
 }
 .review .container > * {
   margin-bottom: 20px;
@@ -370,7 +389,7 @@ main {
 .review-slider-nav li {
   width: 10px;
   height: 10px;
-  margin: 80px 12px 0 12px;
+  margin: 70px 12px;
   background-color: #9EA4A5;
   cursor: pointer;
   transition: 0.25s;
@@ -382,6 +401,30 @@ main {
 .review .start-now {
   text-align: center;
 }
+.review .start-now .title {
+  line-height: 2em;
+}
 .review .start-now h2 {
   font-size: 2em;
+}
+
+.numbers {
+  padding: 70px 0;
+}
+.numbers-list {
+  display: flex;
+}
+.numbers-list-elm {
+  padding: 25px;
+  width: calc(100% / 4);
+  text-align: center;
+  line-height: 6em;
+  border-left: 1px solid #EBEBEB;
+}
+.numbers-list-elm:last-child {
+  border-right: 1px solid #EBEBEB;
+}
+.numbers-list-elm .txt-evd {
+  font-size: 3em;
+  font-weight: bolder;
 }

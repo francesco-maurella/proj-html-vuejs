@@ -345,6 +345,8 @@ main {
 .tutor-program {
   @include section-h-pdd;
 
+  border-bottom-right-radius: 200px;
+
   .container > * {
     @include row-distance;
   }
@@ -375,6 +377,13 @@ main {
 }
 
 #videospace {
+  background-color: $col-even-sect2;
+
+  .rounded-border-effect {
+    background-color: $col-main;
+    border-bottom-right-radius: 50%;
+  }
+
   .link-arrow {
     color: $col-evidence;
   }
@@ -383,6 +392,18 @@ main {
 .review {
   @include section-h-pdd;
   background-color: $col-even-sect2;
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $col-even-sect2;
+    z-index: -10;
+    opacity: 0.5;
+  }
 
   .container > * {
     @include row-distance;
@@ -430,7 +451,7 @@ main {
       li {
         width: 10px;
         height: 10px;
-        margin: 80px 12px 0 12px;;
+        margin: 70px 12px;
         background-color: $col-text;
         cursor: pointer;
         transition: 0.25s;
@@ -446,8 +467,39 @@ main {
   .start-now {
     text-align: center;
 
+      .title {
+        line-height: 2em;
+      }
+
       h2 {
         font-size: 2em;
       }
   }
+}
+
+.numbers {
+  @include section-h-pdd;
+
+    &-list {
+      @include flx;
+
+      &-elm {
+        @include sect-content-pdd;
+        width: calc(100% / 4);
+        text-align: center;
+        line-height: 6em;
+        border-left: 1px solid $col-even-sect2;
+
+          &:last-child {
+            border-right: 1px solid $col-even-sect2;
+          }
+
+          .txt-evd {
+            font-size: 3em;
+            font-weight: bolder;
+          }
+
+      }
+
+    }
 }
