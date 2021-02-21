@@ -1,19 +1,20 @@
 // Colors
-$col-white : #FFFFFF;
-$col-hint : #F6F3F5;
-$col-shadylady : #AEADAE;
-$col-edward : #9EA4A5;
-$col-gunpwd : #48495F;
-$col-outspace : #2C3837;
-$col-junglegreen : #25AB94;
-$col-mountainmd : #1FAD96;
+$col-main : #FFFFFF;
+$col-text : #9EA4A5;
+$col-top-links : #2C3837;
+$col-input : #F6F3F5;
+$col-even-sect1 : #EBEFF5;
+$col-even-sect2 : #EBEBEB;
+$col-even-sect3 : #F1EBE5;
+$col-sect-title : #48495F;
+$col-evidence : #1FAD96;
 
 // Backgrounds
-@mixin bg-white {
-  background-color : $col-white;
-  color : $col-edward;
+@mixin bg-topbar {
+  background: linear-gradient($col-main, rgba(255, 255, 255, .85));
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
 }
-@mixin bg-mountainmd {
-  background-color : $col-mountainmd;
-  color : $col-white;
+@mixin bg-button {
+  background-color : $col-evidence;
+  color : $col-main;
 }
