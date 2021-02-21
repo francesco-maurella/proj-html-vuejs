@@ -9,33 +9,59 @@
 }
 
 /* UTILITY CSS */
+.rounded {
+  border-radius: 6px;
+}
+
+.circled {
+  border-radius: 50%;
+}
+
 .button {
   background-color: #1FAD96;
   color: #FFFFFF;
   display: inline-block;
   margin: 15px 0;
   padding: 12px 50px;
+  border-radius: 5px;
   font-size: 0.9em;
   font-weight: bold;
-  border-radius: 5px;
+}
+.button .fa {
+  vertical-align: middle;
+  font-size: 1.3em;
+}
+
+.link-arrow {
+  font-weight: bold;
+}
+.link-arrow:after {
+  display: inline-block;
+  content: "";
+  font-family: "FontAwesome";
+  font-weight: 100;
+  padding: 0 5px;
+}
+
+.title {
+  color: #48495F;
+  font-weight: bolder;
+  text-transform: capitalize;
+  font-size: 1.3em;
+}
+
+.pre-title {
+  font-weight: 600;
+  line-height: 1.8em;
+  text-transform: uppercase;
 }
 
 .section-title {
   text-align: center;
 }
-
-.section-title h2 {
-  color: #48495F;
-  line-height: 1.8em;
+.section-title .title {
   font-size: 2.2em;
-  font-weight: bolder;
-  text-transform: capitalize;
-}
-
-.section-title h3 {
   line-height: 1.8em;
-  font-weight: 600;
-  text-transform: uppercase;
 }
 
 .txt-evd {
@@ -60,7 +86,7 @@
 
 .container {
   font-family: "Poppins";
-  font-size: 14px;
+  font-size: 15px;
   width: 100%;
   min-width: 1200px;
   max-width: 1200px;
@@ -68,7 +94,7 @@
   line-height: 2em;
 }
 
-/* / TOP-BAR HEADER */
+/* TOP-BAR HEADER */
 .top-bar {
   background: linear-gradient(#FFFFFF, rgba(255, 255, 255, 0.85));
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -111,7 +137,6 @@
 .top-bar-menu-user > li:last-child {
   background-color: #F6F3F5;
   padding-right: 30px;
-  border-radius: 5px;
   position: relative;
 }
 .top-bar-menu-user > li:last-child > input {
@@ -135,85 +160,80 @@ main {
   padding-top: 70px;
 }
 
-.jumbotron {
-  padding: 40px 0;
-}
-.jumbotron .container {
+.primary-sct .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-.jumbotron-description, .jumbotron-images {
-  padding: 25px;
+.primary-sct-description {
+  width: 40%;
 }
-.jumbotron-description {
-  width: 45%;
+.primary-sct-description .title {
+  font-size: 3.1em;
+  line-height: 1.2em;
 }
-.jumbotron-description > * {
+.primary-sct-description .txt {
+  font-size: 1.1em;
+}
+.primary-sct-description > * {
   margin-bottom: 20px;
 }
-.jumbotron-description h2 {
-  color: #48495F;
-  line-height: 1.2em;
-  font-size: 3.1em;
-  font-weight: bolder;
-}
-.jumbotron-description .button .fa {
-  vertical-align: middle;
-  font-size: 1.3em;
-}
-.jumbotron-images {
+.primary-sct-images {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 55%;
+  width: 50%;
   height: 570px;
   position: relative;
 }
-.jumbotron-images .jumbo-cover-img {
+.primary-sct-images .primary-cover-img {
   z-index: 10;
   max-height: 100%;
-  border-radius: 50%;
 }
-.jumbotron-images img:not(.jumbo-cover-img) {
+.primary-sct-images img:not(.primary-cover-img) {
   max-width: 150px;
   position: absolute;
   transition: 5s;
 }
-.jumbotron .jumbo-left-bg {
+.primary-sct .primary-left-bg {
   max-width: 135px;
-  left: 5%;
+  left: -5%;
 }
-.jumbotron:hover .jumbo-left-bg:first-child {
+.primary-sct:hover .primary-left-bg:first-child {
   top: 27%;
 }
-.jumbotron .jumbo-left-bg:first-child {
+.primary-sct .primary-left-bg:first-child {
   top: 10%;
 }
-.jumbotron:hover .jumbo-left-bg:nth-child(2) {
+.primary-sct:hover .primary-left-bg:nth-child(2) {
   bottom: 27%;
 }
-.jumbotron .jumbo-left-bg:nth-child(2) {
+.primary-sct .primary-left-bg:nth-child(2) {
   bottom: 10%;
 }
-.jumbotron:hover .jumbo-right-bg {
-  bottom: 10%;
+.primary-sct:hover .primary-right-bg {
+  bottom: 7%;
 }
-.jumbotron .jumbo-right-bg {
-  right: 15%;
+.primary-sct .primary-right-bg {
+  right: 7%;
   bottom: 65%;
 }
-.jumbotron:hover .jumbo-side-img {
-  top: 25%;
+.primary-sct:hover .primary-side-img {
+  top: 20%;
 }
-.jumbotron .jumbo-side-img {
+.primary-sct .primary-side-img {
   z-index: 11;
   max-width: 120px;
-  right: 0;
+  right: -6%;
   top: 60%;
 }
 
+#jumbotron {
+  padding: 70px 0;
+}
+
 .partners {
-  padding: 40px 0;
+  padding: 70px 0;
 }
 .partners ul {
   display: flex;
@@ -226,7 +246,7 @@ main {
 }
 
 .ft-courses {
-  padding: 40px 0;
+  padding: 70px 0;
   background-color: #EBEFF5;
 }
 .ft-courses-list {
@@ -254,17 +274,13 @@ main {
   flex-direction: column;
   justify-content: space-between;
 }
-.ft-courses-list-el-data h3 {
+.ft-courses-list-el-data .price {
   font-size: 1.8em;
   color: #1FAD96;
   font-weight: bold;
 }
-.ft-courses-list-el-data h3 .txt-xs {
+.ft-courses-list-el-data .price .txt-xs {
   font-size: 0.7em;
-}
-.ft-courses-list-el-data h4 {
-  font-size: 1.3em;
-  color: #48495F;
 }
 .ft-courses-list-el-data-description {
   display: flex;
@@ -276,7 +292,7 @@ main {
 }
 
 .tutor-program {
-  padding: 40px 0;
+  padding: 70px 0;
 }
 .tutor-program .container > * {
   margin-bottom: 20px;
@@ -287,10 +303,10 @@ main {
 }
 .tutor-program-list-elm {
   padding: 25px;
-  width: calc(100% / 3);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: calc(100% / 3);
 }
 .tutor-program-list-elm-img {
   max-width: 170px;
@@ -299,11 +315,73 @@ main {
 .tutor-program-list-elm-img img {
   height: 100%;
 }
-.tutor-program-list-elm h4 {
-  font-size: 1.3em;
+.tutor-program-list-elm .link-arrow {
+  color: #9EA4A5;
+}
+
+#videospace .link-arrow {
+  color: #1FAD96;
+}
+
+.review {
+  padding: 70px 0;
+  background-color: #EBEBEB;
+}
+.review .container > * {
+  margin-bottom: 20px;
+}
+.review-slider-list {
+  display: flex;
+  justify-content: space-between;
+}
+.review-slider-list-el {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(90% / 3);
+  min-height: 570px;
+  background: #FFFFFF;
+  padding: 50px;
+}
+.review-slider-list-el-user {
+  display: flex;
+}
+.review-slider-list-el-user img {
+  max-height: 70px;
+}
+.review-slider-list-el-user .data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 15px;
+}
+.review-slider-list-el-user .data h2 {
+  font-size: 1em;
   color: #48495F;
 }
-.tutor-program-list-elm a {
-  color: #9EA4A5;
-  font-weight: bold;
+.review-slider-list-el-user .data span {
+  font-size: 0.8em;
+}
+.review-slider-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.review-slider-nav li {
+  width: 10px;
+  height: 10px;
+  margin: 80px 12px 0 12px;
+  background-color: #9EA4A5;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.review-slider-nav li:hover {
+  transform: scale(1.4);
+  background-color: #48495F;
+}
+.review .start-now {
+  text-align: center;
+}
+.review .start-now h2 {
+  font-size: 2em;
 }

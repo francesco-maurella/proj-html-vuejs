@@ -15,27 +15,63 @@
 }
 
 /* UTILITY CSS */
+// Decorations
+.rounded {
+  border-radius: 6px;
+}
+
+.circled {
+  border-radius: 50%;
+}
+
 .button {
   @include bg-button;
   display: inline-block;
   margin : 15px 0;
   padding : 12px 50px;
+  border-radius: 5px;
   font-size: 0.9em;
   font-weight: bold;
-  border-radius: 5px;
+
+  .fa {
+    vertical-align: middle;
+    font-size: 1.3em;
+  }
+}
+
+.link-arrow {
+  font-weight: bold;
+
+  &:after {
+    display : inline-block;
+    content : '\f061';
+    font-family: 'FontAwesome';
+    font-weight: 100;
+    padding: 0 5px;
+  }
+}
+
+// Titles
+.title {
+  @include title;
+  font-size: 1.3em;
+}
+
+.pre-title {
+  font-weight: 600;
+  line-height: 1.8em;
+  text-transform: uppercase;
 }
 
 .section-title {
   text-align: center;
+
+  .title {
+    font-size : 2.2em;
+    line-height: 1.8em;
+  }
 }
 
-.section-title h2 {
-  @include sect-title;
-}
-
-.section-title h3 {
-  @include sect-pretitle;
-}
 
 .txt-evd {
   color: $col-evidence;
@@ -50,14 +86,13 @@
   background-color: $col-main;
   color: $col-text;
 
-   a {
-     text-decoration: none;
-   }
+  a {
+    text-decoration: none;
+  }
 
-   li {
-     list-style: none;
-   }
-
+  li {
+    list-style: none;
+  }
 }
 
 .container {
@@ -69,7 +104,7 @@
   line-height: 2em;
 }
 
-/* / TOP-BAR HEADER */
+/* TOP-BAR HEADER */
 .top-bar {
   @include bg-topbar;
   width: 100%;
@@ -101,13 +136,12 @@
       & > li {
         @include sect-content-pdd;
 
-          & > a:after {
-            display : inline-block;
-            content : '\f107';
-            font-family: 'FontAwesome';
-            padding: 0 5px;
-          }
-
+        & > a:after {
+          display : inline-block;
+          content : '\f107';
+          font-family: 'FontAwesome';
+          padding: 0 5px;
+        }
       }
     }
 
@@ -120,7 +154,6 @@
       & > li:last-child {
         background-color: $col-input;
         padding-right: 30px;
-        border-radius : 5px;
         position: relative;
 
         & > input {
@@ -140,13 +173,9 @@
           right : 15px;
           cursor: pointer;
         }
-
       }
-
     }
-
   }
-
 }
 
 /* MAIN BODY */
@@ -154,98 +183,97 @@ main {
   padding-top: $top-hgt;
 }
 
-.jumbotron {
+.primary-sct {
+
+  .container {
+    @include flx-ai-center;
+    justify-content: space-between;
+  }
+
+  &-description, &-images {
+
+  }
+
+  &-description {
+    width: 40%;
+
+    .title {
+      font-size : 3.1em;
+      line-height: 1.2em;
+    }
+
+    .txt {
+      font-size : 1.1em;
+    }
+
+    & > * {
+      @include row-distance;
+    }
+  }
+
+  &-images {
+    @include flx-centered;
+    width: 50%;
+    height: 570px;
+    position: relative;
+
+    .primary-cover-img {
+      z-index: 10;
+      max-height: 100%;
+    }
+
+    img:not(.primary-cover-img) {
+      max-width: 150px;
+      position: absolute;
+      transition: 5s;
+    }
+
+  }
+
+  .primary-left-bg {
+    max-width: 135px;
+    left : -5%;
+  }
+
+  &:hover .primary-left-bg:first-child {
+    top: 27%;
+  }
+
+  .primary-left-bg:first-child{
+    top: 10%;
+  }
+
+  &:hover .primary-left-bg:nth-child(2) {
+    bottom: 27%;
+  }
+
+  .primary-left-bg:nth-child(2){
+    bottom: 10%;
+  }
+
+  &:hover .primary-right-bg {
+    bottom: 7%;
+  }
+
+  .primary-right-bg {
+    right : 7%;
+    bottom: 65%;
+  }
+
+  &:hover .primary-side-img {
+    top : 20%;
+  }
+
+  .primary-side-img {
+    z-index: 11;
+    max-width: 120px;
+    right : -6%;
+    top: 60%;
+  }
+}
+
+#jumbotron {
   @include section-h-pdd;
-
-    .container {
-      @include flx-ai-center;
-    }
-
-    &-description, &-images {
-      @include sect-content-pdd;
-    }
-
-    &-description {
-      width: 45%;
-
-        & > * {
-          @include row-distance;
-        }
-
-        h2 {
-          @include jumbo-title;
-        }
-
-        .button {
-            .fa {
-              vertical-align: middle;
-              font-size: 1.3em;
-            }
-        }
-
-    }
-
-    &-images {
-      @include flx-centered;
-      width: 55%;
-      height: 570px;
-      position: relative;
-
-      .jumbo-cover-img {
-        z-index: 10;
-        max-height: 100%;
-        border-radius: 50%;
-      }
-
-      img:not(.jumbo-cover-img) {
-        max-width: 150px;
-        position: absolute;
-        transition: 5s;
-      }
-
-    }
-
-    .jumbo-left-bg {
-      max-width: 135px;
-      left : 5%;
-    }
-
-    &:hover .jumbo-left-bg:first-child {
-      top: 27%;
-    }
-
-    .jumbo-left-bg:first-child{
-      top: 10%;
-    }
-
-    &:hover .jumbo-left-bg:nth-child(2) {
-      bottom: 27%;
-    }
-
-    .jumbo-left-bg:nth-child(2){
-      bottom: 10%;
-    }
-
-    &:hover .jumbo-right-bg {
-      bottom: 10%;
-    }
-
-    .jumbo-right-bg {
-      right : 15%;
-      bottom: 65%;
-    }
-
-    &:hover .jumbo-side-img {
-      top : 25%;
-    }
-
-    .jumbo-side-img {
-      z-index: 11;
-      max-width: 120px;
-      right : 0;
-      top: 60%;
-    }
-
 }
 
 .partners {
@@ -254,11 +282,10 @@ main {
   ul {
     @include flx-centered;
 
-      li {
-        padding : 0 20px;
-        opacity: 0.6;
-      }
-
+    li {
+      padding : 0 20px;
+      opacity: 0.6;
+    }
   }
 }
 
@@ -266,104 +293,161 @@ main {
   @include section-h-pdd;
   background-color: $col-even-sect1;
 
-    &-list {
+  &-list {
+    @include flx;
+    flex-wrap: wrap;
+
+    &-el {
       @include flx;
-      flex-wrap: wrap;
+      width: calc(100% / 2);
+      margin: 50px 0;
 
-      &-el {
-        @include flx;
-        width: calc(100% / 2);
-        margin: 50px 0;
+      &-img {
+        width: 35%;
+        max-width: 170px;
+        max-height: 170px;
+        border-radius: 50%;
+        overflow: hidden;
 
-        &-img {
-          width: 35%;
-          max-width: 170px;
-          max-height: 170px;
-          border-radius: 50%;
-          overflow: hidden;
-
-            img {
-              max-height: 100%;
-            }
-
+        img {
+          max-height: 100%;
         }
-
-        &-data {
-          @include sect-content-pdd;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-
-            h3 {
-              font-size: 1.8em;
-              color: $col-evidence;
-              font-weight: bold;
-
-                .txt-xs {
-                  font-size: 0.7em;
-                }
-            }
-
-            h4 {
-              font-size: 1.3em;
-              color: $col-sect-title;
-            }
-
-            &-description {
-              @include flx;
-              font-weight: 300;
-              font-size: 0.8em;
-
-                & > * {
-                  padding : 0 10px;
-                }
-
-            }
-
-        }
-
       }
 
-    }
+      &-data {
+        @include sect-content-pdd;
+        @include list-elm-cont-distance;
 
+        .price {
+          font-size: 1.8em;
+          color: $col-evidence;
+          font-weight: bold;
+
+          .txt-xs {
+            font-size: 0.7em;
+          }
+        }
+
+        &-description {
+          @include flx;
+          font-weight: 300;
+          font-size: 0.8em;
+
+          & > * {
+            padding : 0 10px;
+          }
+        }
+      }
+    }
+  }
 }
 
 .tutor-program {
   @include section-h-pdd;
 
-    .container > * {
-      @include row-distance;
+  .container > * {
+    @include row-distance;
+  }
+
+  &-list {
+    @include flx;
+    min-height: 375px;
+
+    &-elm {
+      @include sect-content-pdd;
+      @include list-elm-cont-distance;
+      width: calc(100% / 3);
+
+      &-img {
+        max-width: 170px;
+        max-height: 150px;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .link-arrow {
+        color: $col-text;
+      }
     }
+  }
+}
+
+#videospace {
+  .link-arrow {
+    color: $col-evidence;
+  }
+}
+
+.review {
+  @include section-h-pdd;
+  background-color: $col-even-sect2;
+
+  .container > * {
+    @include row-distance;
+  }
+
+  &-slider {
 
     &-list {
-      @include flx;
-      min-height: 375px;
+      @include flx-jc-spacebtw;
 
-       &-elm {
-         @include sect-content-pdd;
-         width: calc(100% / 3);
-         display: flex;
-         flex-direction: column;
-         justify-content: space-between;
+      &-el {
+        @include list-elm-cont-distance;
+        width: calc(90% / 3);
+        min-height: 570px;
+        background: $col-main;
+        padding: 50px;
 
-          &-img {
-            max-width: 170px;
-            max-height: 150px;
+        &-user {
+          @include flx;
 
-              img {
-                height: 100%;
-              }
+          img {
+            max-height: 70px
           }
 
-          h4 {
-            font-size: 1.3em;
-            color: $col-sect-title;
-          }
+          .data {
+            @include list-elm-cont-distance;
+            padding: 5px 15px;
 
-          a {
-            color: $col-text;
-            font-weight: bold;
+            h2 {
+              font-size: 1em;
+              color: $col-title;
+            }
+
+            span {
+              font-size: 0.8em;
+            }
           }
-       }
+        }
+      }
     }
+
+    &-nav {
+      @include flx-centered;
+
+      li {
+        width: 10px;
+        height: 10px;
+        margin: 80px 12px 0 12px;;
+        background-color: $col-text;
+        cursor: pointer;
+        transition: 0.25s;
+
+        &:hover {
+          transform: scale(1.4);
+          background-color: $col-title;
+        }
+      }
+    }
+  }
+
+  .start-now {
+    text-align: center;
+
+      h2 {
+        font-size: 2em;
+      }
+  }
 }

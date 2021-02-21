@@ -2,7 +2,7 @@
 $top-hgt : 70px;
 
 @mixin section-h-pdd {
-  padding : 40px 0;
+  padding : 70px 0;
 }
 @mixin sect-content-pdd {
   padding : 25px;
@@ -19,10 +19,6 @@ $top-hgt : 70px;
   display: flex;
   align-items: center;
 }
-@mixin flx-jc-center {
-  display: flex;
-  justify-content: center;
-}
 @mixin flx-centered {
   display: flex;
   align-items: center;
@@ -32,7 +28,8 @@ $top-hgt : 70px;
   display: flex;
   justify-content: space-between;
 }
-@mixin flx-jc-end {
+@mixin list-elm-cont-distance {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
 }

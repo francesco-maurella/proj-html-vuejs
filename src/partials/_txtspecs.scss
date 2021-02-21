@@ -2,26 +2,10 @@ $main-font : 'Poppins';
 
 @mixin main-txt {
   font-family: $main-font;
-  font-size: 14px;
+  font-size: 15px;
 }
-
-@mixin sect-pretitle {
-  line-height: 1.8em;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-@mixin sect-title {
-  color: $col-sect-title;
-  line-height: 1.8em;
-  font-size : 2.2em;
+@mixin title {
+  color: $col-title;
   font-weight: bolder;
-  text-transform: capitalize;
-}
-
-@mixin jumbo-title {
-  color: $col-sect-title;
-  line-height: 1.2em;
-  font-size : 3.1em;
-  font-weight: bolder;
+  text-transform: capitalize
 }
