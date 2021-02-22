@@ -18,7 +18,7 @@
   </head>
   <body>
 
-    <div class="wrapper">
+    <div id="app" class="wrapper">
 
       <!-- TOP-BAR HEADER -->
       <header class="top-bar">
@@ -28,12 +28,7 @@
           </div>
           <nav class="top-bar-menu">
             <ul class="top-bar-menu-site">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Pages</a></li>
-              <li><a href="#">Courses</a></li>
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Shop</a></li>
+              <li v-for="link in topMenu"><a href="#">{{link}}</a></li>
             </ul>
             <ul class="top-bar-menu-user">
               <li>
@@ -582,6 +577,7 @@
 
     </div>
 
+    <script src="js/script.js" charset="utf-8"></script>
 
   </body>
 </html>
