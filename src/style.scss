@@ -384,6 +384,24 @@ main {
     border-bottom-right-radius: 50%;
   }
 
+  .primary-cover-img {
+    position: relative;
+  }
+
+  .play-button {
+    @include flx-centered;
+    width: 100px;
+    height: 70px;
+    position: absolute;
+    z-index: 20;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .play-button:hover {
+    transform: scale(1.2);
+  }
+
   .link-arrow {
     color: $col-evidence;
   }

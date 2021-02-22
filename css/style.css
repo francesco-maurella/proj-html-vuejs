@@ -327,6 +327,23 @@ main {
   background-color: #FFFFFF;
   border-bottom-right-radius: 50%;
 }
+#videospace .primary-cover-img {
+  position: relative;
+}
+#videospace .play-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  z-index: 20;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#videospace .play-button:hover {
+  transform: scale(1.2);
+}
 #videospace .link-arrow {
   color: #1FAD96;
 }
