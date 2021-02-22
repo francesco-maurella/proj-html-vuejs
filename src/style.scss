@@ -416,12 +416,16 @@ main {
       @include flx-jc-spacebtw;
       text-align: left;
 
-      &-el {
+      &-elm {
         @include list-elm-cont-distance;
-        width: calc(90% / 3);
+        width: calc(92% / 3);
         min-height: 570px;
         background: $col-main;
         padding: 50px;
+
+        &:not(:nth-child(2)){
+          opacity: 0.6;
+        }
 
         &-user {
           @include flx;
@@ -570,14 +574,19 @@ main {
     font-size: 2em;
   }
 
+  &-input, p {
+    width: 50%;
+    font-size: 1.1em;
+    margin: auto;
+  }
+
   &-input {
     @include flx;
-    width: 50%;
-    margin: auto;
     background-color: $col-input;
 
     & > input {
       width: 70%;
+      padding: 0 20px;
       background-color: transparent;
       font-family : $main-font;
       border: 0;
@@ -588,9 +597,51 @@ main {
     }
 
     .button {
+      width: 30%;
       margin: 0;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
   }
+}
+
+.footer {
+  @include section-h-pdd;
+  background-color: $col-even-sect1;
+
+    &-col {
+      @include flx-jc-spacebtw;
+      font-size: 0.9em;
+
+        * {
+          color: $col-top-links;
+        }
+
+        h3 {
+          color: $col-foot-title
+        }
+
+        &-credits {
+          width: 30%;
+
+            .social-ico{
+              @include flx-jc-spacebtw;
+              margin-top: 20px;
+              width: 50%;
+              font-size: 1.5em;
+              opacity: 0.4;
+            }
+        }
+
+        &-menu {
+          @include flx-jc-spacebtw;
+          width: 30%;
+        }
+    }
+
+    .copyright {
+      margin-top: 30px;
+      font-size: 0.9em;
+      text-align: center;
+    }
 }

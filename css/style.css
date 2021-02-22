@@ -355,32 +355,35 @@ main {
   justify-content: space-between;
   text-align: left;
 }
-.review-slider-list-el {
+.review-slider-list-elm {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: calc(90% / 3);
+  width: calc(92% / 3);
   min-height: 570px;
   background: #FFFFFF;
   padding: 50px;
 }
-.review-slider-list-el-user {
+.review-slider-list-elm:not(:nth-child(2)) {
+  opacity: 0.6;
+}
+.review-slider-list-elm-user {
   display: flex;
 }
-.review-slider-list-el-user img {
+.review-slider-list-elm-user img {
   max-height: 70px;
 }
-.review-slider-list-el-user .data {
+.review-slider-list-elm-user .data {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 5px 15px;
 }
-.review-slider-list-el-user .data h2 {
+.review-slider-list-elm-user .data h2 {
   font-size: 1em;
   color: #48495F;
 }
-.review-slider-list-el-user .data span {
+.review-slider-list-elm-user .data span {
   font-size: 0.8em;
 }
 .review-slider-nav {
@@ -488,14 +491,18 @@ main {
 .subscription .title {
   font-size: 2em;
 }
+.subscription-input, .subscription p {
+  width: 50%;
+  font-size: 1.1em;
+  margin: auto;
+}
 .subscription-input {
   display: flex;
-  width: 50%;
-  margin: auto;
   background-color: #F6F3F5;
 }
 .subscription-input > input {
   width: 70%;
+  padding: 0 20px;
   background-color: transparent;
   font-family: "Poppins";
   border: 0;
@@ -504,7 +511,45 @@ main {
   outline: none;
 }
 .subscription-input .button {
+  width: 30%;
   margin: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+.footer {
+  padding: 70px 0;
+  background-color: #EBEFF5;
+}
+.footer-col {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+}
+.footer-col * {
+  color: #2C3837;
+}
+.footer-col h3 {
+  color: #000000;
+}
+.footer-col-credits {
+  width: 30%;
+}
+.footer-col-credits .social-ico {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 50%;
+  font-size: 1.5em;
+  opacity: 0.4;
+}
+.footer-col-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+.footer .copyright {
+  margin-top: 30px;
+  font-size: 0.9em;
+  text-align: center;
 }
