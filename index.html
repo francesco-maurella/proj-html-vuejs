@@ -77,26 +77,8 @@
       <!-- Partners-bar -->
       <section class="partners">
         <ul class="container">
-          <li>
-            <img src="img/client-logo-01.png" alt="MaxCoach - Partner">
-          </li>
-          <li>
-            <img src="img/client-logo-02.png" alt="MaxCoach - Partner">
-          </li>
-          <li>
-            <img src="img/client-logo-03.png" alt="MaxCoach - Partner">
-          </li>
-          <li>
-            <img src="img/client-logo-04.png" alt="MaxCoach - Partner">
-          </li>
-          <li>
-            <img src="img/client-logo-05.png" alt="MaxCoach - Partner">
-          </li>
-          <li>
-            <img src="img/client-logo-06.png" alt="MaxCoach - Partner">
-          </li>
-          <li>
-            <img src="img/client-logo-07.png" alt="MaxCoach - Partner">
+          <li v-for="client in partners">
+            <img :src="'img/client-logo-' + client.img + '.png'" :alt="'Partner [' + client.name + ']'">
           </li>
         </ul>
       </section>
@@ -112,149 +94,25 @@
           <ul class="ft-courses-list">
 
             <!-- course element -->
-            <li class="ft-courses-list-el">
+            <li v-for="course in courses" class="ft-courses-list-el">
               <!-- course image -->
               <div class="ft-courses-list-el-img">
-                <img src="img/course-02-480x298.jpg" alt="Course">
+                <img :src="'img/' + course.img + '.jpg'" alt="Course">
               </div>
               <!-- / course image -->
               <!-- course data -->
               <div class="ft-courses-list-el-data">
-                <h3 class="price">$40.<span class="txt-xs">00</span></h3>
-                <h4 class="title">Learning to Write as a Professional Author</h4>
+                <h3 v-if="course.price" class="price">{{course.price}}<span class="txt-xs">,00</span></h3>
+                <h3 v-else class="price">Free</span></h3>
+                <h4 class="title">{{course.name}}</h4>
                 <div class="ft-courses-list-el-data-description">
                   <div>
                     <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                    <span>20 lessons</span>
+                    <span>{{course.data.lessons}} Lessons</span>
                   </div>
                   <div>
                     <i class="fa fa-user-o" aria-hidden="true"></i>
-                    <span>50 Students</span>
-                  </div>
-                </div>
-              </div>
-              <!-- / course data -->
-            </li>
-            <!-- / course element -->
-            <!-- course element -->
-            <li class="ft-courses-list-el">
-              <!-- course image -->
-              <div class="ft-courses-list-el-img">
-                <img src="img/course-02-480x298.jpg" alt="Course">
-              </div>
-              <!-- / course image -->
-              <!-- course data -->
-              <div class="ft-courses-list-el-data">
-                <h3 class="price">$40.<span class="txt-xs">00</span></h3>
-                <h4 class="title">Learning to Write as a Professional Author</h4>
-                <div class="ft-courses-list-el-data-description">
-                  <div>
-                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                    <span>20 lessons</span>
-                  </div>
-                  <div>
-                    <i class="fa fa-user-o" aria-hidden="true"></i>
-                    <span>50 Students</span>
-                  </div>
-                </div>
-              </div>
-              <!-- / course data -->
-            </li>
-            <!-- / course element -->
-            <!-- course element -->
-            <li class="ft-courses-list-el">
-              <!-- course image -->
-              <div class="ft-courses-list-el-img">
-                <img src="img/course-02-480x298.jpg" alt="Course">
-              </div>
-              <!-- / course image -->
-              <!-- course data -->
-              <div class="ft-courses-list-el-data">
-                <h3 class="price">$40.<span class="txt-xs">00</span></h3>
-                <h4 class="title">Learning to Write as a Professional Author</h4>
-                <div class="ft-courses-list-el-data-description">
-                  <div>
-                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                    <span>20 lessons</span>
-                  </div>
-                  <div>
-                    <i class="fa fa-user-o" aria-hidden="true"></i>
-                    <span>50 Students</span>
-                  </div>
-                </div>
-              </div>
-              <!-- / course data -->
-            </li>
-            <!-- / course element -->
-            <!-- course element -->
-            <li class="ft-courses-list-el">
-              <!-- course image -->
-              <div class="ft-courses-list-el-img">
-                <img src="img/course-02-480x298.jpg" alt="Course">
-              </div>
-              <!-- / course image -->
-              <!-- course data -->
-              <div class="ft-courses-list-el-data">
-                <h3 class="price">$40.<span class="txt-xs">00</span></h3>
-                <h4 class="title">Learning to Write as a Professional Author</h4>
-                <div class="ft-courses-list-el-data-description">
-                  <div>
-                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                    <span>20 lessons</span>
-                  </div>
-                  <div>
-                    <i class="fa fa-user-o" aria-hidden="true"></i>
-                    <span>50 Students</span>
-                  </div>
-                </div>
-              </div>
-              <!-- / course data -->
-            </li>
-            <!-- / course element -->
-            <!-- course element -->
-            <li class="ft-courses-list-el">
-              <!-- course image -->
-              <div class="ft-courses-list-el-img">
-                <img src="img/course-02-480x298.jpg" alt="Course">
-              </div>
-              <!-- / course image -->
-              <!-- course data -->
-              <div class="ft-courses-list-el-data">
-                <h3 class="price">$40.<span class="txt-xs">00</span></h3>
-                <h4 class="title">Learning to Write as a Professional Author</h4>
-                <div class="ft-courses-list-el-data-description">
-                  <div>
-                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                    <span>20 lessons</span>
-                  </div>
-                  <div>
-                    <i class="fa fa-user-o" aria-hidden="true"></i>
-                    <span>50 Students</span>
-                  </div>
-                </div>
-              </div>
-              <!-- / course data -->
-            </li>
-            <!-- / course element -->
-            <!-- course element -->
-            <li class="ft-courses-list-el">
-              <!-- course image -->
-              <div class="ft-courses-list-el-img">
-                <img src="img/course-02-480x298.jpg" alt="Course">
-              </div>
-              <!-- / course image -->
-              <!-- course data -->
-              <div class="ft-courses-list-el-data">
-                <h3 class="price">$40.<span class="txt-xs">00</span></h3>
-                <h4 class="title">Learning to Write as a Professional Author</h4>
-                <div class="ft-courses-list-el-data-description">
-                  <div>
-                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                    <span>20 lessons</span>
-                  </div>
-                  <div>
-                    <i class="fa fa-user-o" aria-hidden="true"></i>
-                    <span>50 Students</span>
+                    <span>{{course.data.students}} Students</span>
                   </div>
                 </div>
               </div>
