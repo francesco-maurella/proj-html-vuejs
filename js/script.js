@@ -13,6 +13,12 @@ new Vue ({
       'Shop',
     ],
 
+    jumbotron : {
+      title: 'Distant learning for further expansion',
+      description: 'Learning is a life-long journey that infact we never find the terminate stop. Stop searching, enjoy the process.',
+      image: 'about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0',
+    },
+
     partners: [
       {name: 'Stylus', img: '01'},
       {name: 'Tree', img: '02'},
@@ -23,61 +29,65 @@ new Vue ({
       {name: 'Nowhere famous', img: '07'},
     ],
 
-    courses: [
-      {
-        name: 'Learning to Write as a Professional Author',
-        price: 40,
-        img: 'course-02-480x298',
-        data: {
-          lessons: 20,
-          students: 50
+    courses : {
+      pretitle: 'Stimulated to learn?',
+      title: 'Featured online courses',
+      list: [
+        {
+          name: 'Learning to Write as a Professional Author',
+          price: 40,
+          img: 'course-02-480x298',
+          data: {
+            lessons: 20,
+            students: 50
+          }
+        },
+        {
+          name: 'Customer-centric Info-Tech Strategies',
+          price: false,
+          img: 'stock-full-hd-03-480x298',
+          data: {
+            lessons: 24,
+            students: 785
+          }
+        },
+        {
+          name: 'Open Programming Courses for Everyone: Python',
+          price: 19,
+          img: 'stock-full-hd-04-480x298',
+          data: {
+            lessons: 17,
+            students: 62
+          }
+        },
+        {
+          name: 'Academic Listening and Note-taking',
+          price: 26,
+          img: 'stock-full-hd-06-480x298',
+          data: {
+            lessons: 14,
+            students: 67
+          }
+        },
+        {
+          name: 'Master jQuery in a Short Period of Time',
+          price: 39,
+          img: 'course-featured-image-01-480x298',
+          data: {
+            lessons: 6,
+            students: 51
+          }
+        },
+        {
+          name: 'Introduction to Javascript for Beginners',
+          price: 59,
+          img: 'stock-full-hd-05-480x298',
+          data: {
+            lessons: 14,
+            students: 16
+          }
         }
-      },
-      {
-        name: 'Customer-centric Info-Tech Strategies',
-        price: false,
-        img: 'stock-full-hd-03-480x298',
-        data: {
-          lessons: 24,
-          students: 785
-        }
-      },
-      {
-        name: 'Open Programming Courses for Everyone: Python',
-        price: 19,
-        img: 'stock-full-hd-04-480x298',
-        data: {
-          lessons: 17,
-          students: 62
-        }
-      },
-      {
-        name: 'Academic Listening and Note-taking',
-        price: 26,
-        img: 'stock-full-hd-06-480x298',
-        data: {
-          lessons: 14,
-          students: 67
-        }
-      },
-      {
-        name: 'Master jQuery in a Short Period of Time',
-        price: 39,
-        img: 'course-featured-image-01-480x298',
-        data: {
-          lessons: 6,
-          students: 51
-        }
-      },
-      {
-        name: 'Introduction to Javascript for Beginners',
-        price: 59,
-        img: 'stock-full-hd-05-480x298',
-        data: {
-          lessons: 14,
-          students: 16
-        }
-      }
-    ]
+      ]
+    }
   }
 })

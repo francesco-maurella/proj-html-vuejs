@@ -6,6 +6,6 @@ $main-font : 'Poppins';
 }
 @mixin title {
   color: $col-title;
-  font-weight: bolder;
+  font-weight: 600;
   text-transform: capitalize
 }

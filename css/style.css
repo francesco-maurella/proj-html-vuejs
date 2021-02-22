@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 @charset "UTF-8";
 /* RESET CSS */
@@ -45,7 +45,7 @@
 
 .title {
   color: #48495F;
-  font-weight: bolder;
+  font-weight: 600;
   text-transform: capitalize;
   font-size: 1.3em;
 }
@@ -274,12 +274,15 @@ main {
   justify-content: space-between;
 }
 .ft-courses-list-el-data .price {
-  font-size: 1.8em;
+  font-size: 1.55em;
   color: #1FAD96;
-  font-weight: bold;
+  font-weight: bolder;
 }
 .ft-courses-list-el-data .price .txt-xs {
-  font-size: 0.7em;
+  font-size: 0.8em;
+}
+.ft-courses-list-el-data .title {
+  font-size: 1.25em;
 }
 .ft-courses-list-el-data-description {
   display: flex;

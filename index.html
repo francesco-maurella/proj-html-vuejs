@@ -51,10 +51,9 @@
           <div class="container">
             <!-- description -->
             <div class="primary-sct-description">
-              <h2 class="title">Distant learning for further expansion</h2>
+              <h2 class="title">{{jumbotron.title}}</h2>
               <p class="txt">
-                Learning is a life-long journey that infact we never find the terminate stop.
-                Stop searching, enjoy the process.
+                {{jumbotron.description}}
               </p>
               <a href="#" class="button">
                 <i class="fa fa-download" aria-hidden="true"></i>
@@ -68,7 +67,7 @@
               <img src="img/maxcoach-shape-08.png" class="primary-left-bg" alt="Jumbotron">
               <img src="img/maxcoach-shape-07.png" class="primary-right-bg" alt="Jumbotron">
               <img src="img/maxcoach-shape-02.png" class="primary-side-img" alt="Jumbotron">
-              <img src="img/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg" class="primary-cover-img circled" alt="Jumbotron">
+              <img :src="'img/' + jumbotron.image + '.jpg'" class="primary-cover-img circled" alt="Jumbotron">
             </div>
             <!-- / images -->
           </div>
@@ -87,14 +86,13 @@
       <section class="ft-courses">
         <div class="container">
           <div class="section-title">
-            <h3 class="pre-title">Stimulated to learn?</h3>
-            <h2 class="title">Featured online courses</h2>
+            <h3 class="pre-title">{{courses.pretitle}}</h3>
+            <h2 class="title">{{courses.title}}</h2>
           </div>
           <!-- courses list -->
           <ul class="ft-courses-list">
-
             <!-- course element -->
-            <li v-for="course in courses" class="ft-courses-list-el">
+            <li v-for="course in courses.list" class="ft-courses-list-el">
               <!-- course image -->
               <div class="ft-courses-list-el-img">
                 <img :src="'img/' + course.img + '.jpg'" alt="Course">
@@ -102,8 +100,8 @@
               <!-- / course image -->
               <!-- course data -->
               <div class="ft-courses-list-el-data">
-                <h3 v-if="course.price" class="price">{{course.price}}<span class="txt-xs">,00</span></h3>
-                <h3 v-else class="price">Free</span></h3>
+                <h3 v-if="course.price" class="price">{{course.price}}<span class="txt-xs">,00</span>$</h3>
+                <h3 v-else class="price">Free</h3>
                 <h4 class="title">{{course.name}}</h4>
                 <div class="ft-courses-list-el-data-description">
                   <div>
