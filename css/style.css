@@ -35,7 +35,7 @@
 .link-arrow {
   font-weight: bold;
 }
-.link-arrow:after {
+.link-arrow.aft:after, .link-arrow.bfr:before {
   display: inline-block;
   content: "";
   font-family: "FontAwesome";
@@ -56,9 +56,6 @@
   text-transform: uppercase;
 }
 
-.section-title {
-  text-align: center;
-}
 .section-title .title {
   font-size: 2.2em;
   line-height: 1.8em;
@@ -248,10 +245,12 @@ main {
 .ft-courses {
   padding: 70px 0;
   background-color: #EBEFF5;
+  text-align: center;
 }
 .ft-courses-list {
   display: flex;
   flex-wrap: wrap;
+  text-align: left;
 }
 .ft-courses-list-el {
   display: flex;
@@ -293,7 +292,7 @@ main {
 
 .tutor-program {
   padding: 70px 0;
-  border-bottom-right-radius: 200px;
+  text-align: center;
 }
 .tutor-program .container > * {
   margin-bottom: 20px;
@@ -301,6 +300,7 @@ main {
 .tutor-program-list {
   display: flex;
   min-height: 375px;
+  text-align: left;
 }
 .tutor-program-list-elm {
   padding: 25px;
@@ -334,6 +334,7 @@ main {
 .review {
   padding: 70px 0;
   background-color: #EBEBEB;
+  text-align: center;
 }
 .review:before {
   content: "";
@@ -352,6 +353,7 @@ main {
 .review-slider-list {
   display: flex;
   justify-content: space-between;
+  text-align: left;
 }
 .review-slider-list-el {
   display: flex;
@@ -415,16 +417,94 @@ main {
   display: flex;
 }
 .numbers-list-elm {
-  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: calc(100% / 4);
+  min-height: 320px;
+  padding: 50px;
   text-align: center;
-  line-height: 6em;
   border-left: 1px solid #EBEBEB;
 }
 .numbers-list-elm:last-child {
   border-right: 1px solid #EBEBEB;
 }
+.numbers-list-elm .title {
+  font-size: 1.6em;
+}
 .numbers-list-elm .txt-evd {
-  font-size: 3em;
+  font-size: 4.5em;
   font-weight: bolder;
+}
+.numbers-list-elm .description {
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.most-viewed {
+  padding: 70px 0;
+  background-color: #F1EBE5;
+}
+.most-viewed .container {
+  display: flex;
+  align-items: center;
+}
+.most-viewed-description {
+  width: 40%;
+  padding-right: 80px;
+}
+.most-viewed-description > * {
+  margin-bottom: 20px;
+}
+.most-viewed-description ul {
+  font-size: 0.9em;
+  color: #48495F;
+  line-height: 3em;
+}
+.most-viewed-list {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+.most-viewed-list-el {
+  width: calc(95% / 2);
+  background-color: #FFFFFF;
+}
+.most-viewed-list-el img {
+  max-width: 100%;
+}
+.most-viewed-list-el .data {
+  padding: 25px;
+}
+
+.subscription {
+  padding: 70px 0;
+  text-align: center;
+}
+.subscription .container > * {
+  margin-bottom: 20px;
+}
+.subscription .title {
+  font-size: 2em;
+}
+.subscription-input {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  background-color: #F6F3F5;
+}
+.subscription-input > input {
+  width: 70%;
+  background-color: transparent;
+  font-family: "Poppins";
+  border: 0;
+}
+.subscription-input > input:focus {
+  outline: none;
+}
+.subscription-input .button {
+  margin: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }

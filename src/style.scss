@@ -42,7 +42,7 @@
 .link-arrow {
   font-weight: bold;
 
-  &:after {
+  &.aft:after, &.bfr:before {
     display : inline-block;
     content : '\f061';
     font-family: 'FontAwesome';
@@ -64,8 +64,6 @@
 }
 
 .section-title {
-  text-align: center;
-
   .title {
     font-size : 2.2em;
     line-height: 1.8em;
@@ -292,10 +290,12 @@ main {
 .ft-courses {
   @include section-h-pdd;
   background-color: $col-even-sect1;
+  text-align: center;
 
   &-list {
     @include flx;
     flex-wrap: wrap;
+    text-align: left;
 
     &-el {
       @include flx;
@@ -344,8 +344,7 @@ main {
 
 .tutor-program {
   @include section-h-pdd;
-
-  border-bottom-right-radius: 200px;
+  text-align: center;
 
   .container > * {
     @include row-distance;
@@ -354,6 +353,7 @@ main {
   &-list {
     @include flx;
     min-height: 375px;
+    text-align: left;
 
     &-elm {
       @include sect-content-pdd;
@@ -392,6 +392,7 @@ main {
 .review {
   @include section-h-pdd;
   background-color: $col-even-sect2;
+  text-align: center;
 
   &:before {
     content: '';
@@ -413,6 +414,7 @@ main {
 
     &-list {
       @include flx-jc-spacebtw;
+      text-align: left;
 
       &-el {
         @include list-elm-cont-distance;
@@ -484,22 +486,111 @@ main {
       @include flx;
 
       &-elm {
-        @include sect-content-pdd;
+        @include list-elm-cont-distance;
         width: calc(100% / 4);
+        min-height: 320px;
+        padding: 50px;
         text-align: center;
-        line-height: 6em;
         border-left: 1px solid $col-even-sect2;
 
           &:last-child {
             border-right: 1px solid $col-even-sect2;
           }
 
+          .title {
+            font-size: 1.6em;
+          }
+
           .txt-evd {
-            font-size: 3em;
+            font-size: 4.5em;
             font-weight: bolder;
           }
 
+          .description {
+            font-size: 1.1em;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
       }
+    }
+}
+
+.most-viewed {
+  @include section-h-pdd;
+  background-color: $col-even-sect3;
+
+    .container {
+      @include flx-ai-center;
+    }
+
+    &-description {
+      width: 40%;
+      padding-right: 80px;
+
+        & > * {
+          @include row-distance;
+        }
+
+        ul {
+          font-size: 0.9em;
+          color: $col-title;
+          line-height: 3em;
+        }
 
     }
+
+    &-list {
+      @include flx-jc-spacebtw;
+      width: 60%;
+
+        &-el {
+          width: calc(95% / 2);
+          background-color: $col-main;
+
+            img {
+              max-width: 100%;
+            }
+
+            .data {
+              @include sect-content-pdd;
+            }
+        }
+    }
+}
+
+.subscription {
+  @include section-h-pdd;
+  text-align: center;
+
+  .container > * {
+    @include row-distance;
+  }
+
+  .title {
+    font-size: 2em;
+  }
+
+  &-input {
+    @include flx;
+    width: 50%;
+    margin: auto;
+    background-color: $col-input;
+
+    & > input {
+      width: 70%;
+      background-color: transparent;
+      font-family : $main-font;
+      border: 0;
+    }
+
+    & > input:focus {
+      outline: none;
+    }
+
+    .button {
+      margin: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
 }
