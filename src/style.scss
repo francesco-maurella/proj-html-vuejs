@@ -440,9 +440,10 @@ main {
         min-height: 570px;
         background: $col-main;
         padding: 50px;
+        opacity: 0.6;
 
-        &:not(:nth-child(2)){
-          opacity: 0.6;
+        &.active{
+          opacity: 1;
         }
 
         &-user {

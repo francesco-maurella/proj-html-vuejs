@@ -383,9 +383,10 @@ main {
   min-height: 570px;
   background: #FFFFFF;
   padding: 50px;
-}
-.review-slider-list-elm:not(:nth-child(2)) {
   opacity: 0.6;
+}
+.review-slider-list-elm.active {
+  opacity: 1;
 }
 .review-slider-list-elm-user {
   display: flex;

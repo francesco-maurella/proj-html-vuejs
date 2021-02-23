@@ -4,6 +4,7 @@ new Vue ({
 
   //DATA
   data: {
+    activeSlide : 1,
     topMenu: [
       'Home',
       'Pages',
@@ -233,5 +234,16 @@ new Vue ({
         ]
       }
     ]
+  },
+
+  // METHODS
+  methods: {
+    slider: function(index){
+      this.activeSlide = index;
+    },
+
+    viewSlide: function(index){
+      return {'active' : index === this.activeSlide}
+    }
   }
 })
