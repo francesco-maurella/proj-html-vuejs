@@ -432,18 +432,28 @@ main {
 
     &-list {
       @include flx-jc-spacebtw;
+      position: relative;
       text-align: left;
 
       &-elm {
         @include list-elm-cont-distance;
-        width: calc(92% / 3);
+        width: calc(94% / 3);
         min-height: 570px;
         background: $col-main;
         padding: 50px;
-        opacity: 0.6;
+
+        &:not(.active){
+          opacity: 0.6;
+          transform: scale(0.98);
+        }
 
         &.active{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
           opacity: 1;
+          order: 0;
         }
 
         &-user {
@@ -481,7 +491,7 @@ main {
         cursor: pointer;
         transition: 0.25s;
 
-        &:hover {
+        &:hover, &.active {
           transform: scale(1.4);
           background-color: $col-title;
         }

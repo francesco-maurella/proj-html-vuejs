@@ -4,7 +4,7 @@ new Vue ({
 
   //DATA
   data: {
-    activeSlide : 1,
+    activeSlide : 0,
     topMenu: [
       'Home',
       'Pages',

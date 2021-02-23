@@ -373,20 +373,29 @@ main {
 .review-slider-list {
   display: flex;
   justify-content: space-between;
+  position: relative;
   text-align: left;
 }
 .review-slider-list-elm {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: calc(92% / 3);
+  width: calc(94% / 3);
   min-height: 570px;
   background: #FFFFFF;
   padding: 50px;
+}
+.review-slider-list-elm:not(.active) {
   opacity: 0.6;
+  transform: scale(0.98);
 }
 .review-slider-list-elm.active {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 1;
+  order: 0;
 }
 .review-slider-list-elm-user {
   display: flex;
@@ -420,7 +429,7 @@ main {
   cursor: pointer;
   transition: 0.25s;
 }
-.review-slider-nav li:hover {
+.review-slider-nav li:hover, .review-slider-nav li.active {
   transform: scale(1.4);
   background-color: #48495F;
 }

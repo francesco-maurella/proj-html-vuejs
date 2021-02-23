@@ -204,7 +204,7 @@
             <!-- / list -->
             <!-- slider navbar -->
             <ul class="review-slider-nav">
-              <li v-for="(li, i) in reviews" class="circled" @click="slider(i)"></li>
+              <li v-for="(li, i) in reviews" class="circled" :class="viewSlide(i)" @click="slider(i)"></li>
             </ul>
             <!-- / slider navbar -->
           </div>
