@@ -36,7 +36,7 @@
               </li>
               <li class="rounded">
                 <input type="text" placeholder="Search...">
-                <a class="fa fa-search" aria-hidden="true"></a>
+                <i class="fa fa-search rounded" aria-hidden="true"></i>
               </li>
             </ul>
           </nav>
@@ -55,10 +55,10 @@
               <p class="txt">
                 Learning is a life-long journey that infact we never find the terminate stop. Stop searching, enjoy the process.
               </p>
-              <a href="#" class="button">
+              <div class="button">
                 <i class="fa fa-download" aria-hidden="true"></i>
                 <span>Download free guide</span>
-              </a href="#">
+              </div>
             </div>
             <!-- / description -->
             <!-- images -->
@@ -213,9 +213,9 @@
           <div class="start-now">
             <h3 class="title">Start today for getting <span class="txt-evd">Online Certification</span></h3>
             <h2 class="title">You can be your own guiding star with our help!</h2>
-            <a href="#" class="button">
+            <div class="button">
               Get started now
-            </a>
+            </div>
           </div>
           <!-- / get started -->
         </div>
@@ -257,6 +257,16 @@
               <div class="data">
                 <h3 class="pre-title">{{blog.type}}</h3>
                 <h2 class="title">{{blog.title}}</h2>
+                <div class="data-calendar">
+                  <div>
+                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                    <span>{{blog.calendar.date}}</span>
+                  </div>
+                  <div>
+                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                    <span>{{blog.calendar.views}} views</span>
+                  </div>
+                </div>
               </div>
             </li>
             <!-- / element -->
@@ -274,9 +284,9 @@
           </p>
           <div class="subscription-input rounded">
             <input type="text">
-            <a href="#" class="button">
+            <div class="button">
               Subscribe
-            </a>
+            </div>
           </div>
         </div>
       </section>
@@ -305,25 +315,17 @@
               <div class="footer-col-menu-elm">
                 <h3>Explore</h3>
                 <ul>
-                  <li><a href="#">Start here</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">About us</a></li>
+                  <li v-for="link in footerMenu.explore">
+                    <a href="#">{{link}}</a>
+                  </li>
                 </ul>
               </div>
               <div class="footer-col-menu-elm">
-                <h3>Explore</h3>
+                  <h3>Informations</h3>
                 <ul>
-                  <li><a href="#">Start here</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">About us</a></li>
-                </ul>
-              </div>
-              <div class="footer-col-menu-elm">
-                <h3>Explore</h3>
-                <ul>
-                  <li><a href="#">Start here</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">About us</a></li>
+                  <li v-for="link in footerMenu.info">
+                    <a href="#">{{link}}</a>
+                  </li>
                 </ul>
               </div>
             </nav>

@@ -212,28 +212,22 @@ new Vue ({
       }
     ],
 
-    footerMenu: [
-      {
-        title: 'Explore',
-        links: [
-          'Start here',
-          'Success story',
-          'Blog',
-          'Courses',
-          'About us',
-          'Contact us'
-        ]
-      },
-      {
-        title: 'Information',
-        links: [
-          'Membership',
-          'Purchase guide',
-          'Privacy policy',
-          'Terms of services'
-        ]
-      }
-    ]
+    footerMenu: {
+      explore: [
+        'Start here',
+        'Success story',
+        'Blog',
+        'Courses',
+        'About us',
+        'Contact us'
+      ],
+      info: [
+        'Membership',
+        'Purchase guide',
+        'Privacy policy',
+        'Terms of services'
+      ]
+    }
   },
 
   // METHODS

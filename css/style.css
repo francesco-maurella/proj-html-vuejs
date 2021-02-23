@@ -6,6 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: 0.2s;
 }
 
 /* UTILITY CSS */
@@ -26,10 +27,14 @@
   border-radius: 5px;
   font-size: 0.9em;
   font-weight: bold;
+  cursor: pointer;
 }
 .button .fa {
   vertical-align: middle;
   font-size: 1.3em;
+}
+.button:hover {
+  background-color: #48495F;
 }
 
 .link-arrow {
@@ -76,6 +81,10 @@
 }
 .wrapper a {
   text-decoration: none;
+}
+.wrapper a:hover {
+  text-decoration: underline;
+  color: #1FAD96;
 }
 .wrapper li {
   list-style: none;
@@ -146,10 +155,19 @@
   outline: none;
 }
 .top-bar-menu-user > li:last-child .fa-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 100%;
   color: #1FAD96;
   position: absolute;
-  right: 15px;
+  right: 0;
   cursor: pointer;
+}
+.top-bar-menu-user > li:last-child .fa-search:hover {
+  background-color: #1FAD96;
+  color: #FFFFFF;
 }
 
 /* MAIN BODY */
@@ -508,7 +526,19 @@ main {
   max-width: 100%;
 }
 .most-viewed-list-el .data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 25px;
+  min-height: 170px;
+}
+.most-viewed-list-el .data-calendar {
+  display: flex;
+  font-weight: 300;
+  font-size: 0.8em;
+}
+.most-viewed-list-el .data-calendar > * {
+  padding: 0 10px;
 }
 
 .subscription {
@@ -577,6 +607,13 @@ main {
   display: flex;
   justify-content: space-between;
   width: 30%;
+}
+.footer-col-menu-elm:first-child ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-col-menu-elm:first-child ul li {
+  width: 50%;
 }
 .footer .copyright {
   margin-top: 30px;
