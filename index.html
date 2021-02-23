@@ -51,9 +51,9 @@
           <div class="container">
             <!-- description -->
             <div class="primary-sct-description">
-              <h2 class="title">{{jumbotron.title}}</h2>
+              <h2 class="title">Distant learning for further expansion</h2>
               <p class="txt">
-                {{jumbotron.description}}
+                Learning is a life-long journey that infact we never find the terminate stop. Stop searching, enjoy the process.
               </p>
               <a href="#" class="button">
                 <i class="fa fa-download" aria-hidden="true"></i>
@@ -86,13 +86,13 @@
       <section class="ft-courses">
         <div class="container">
           <div class="section-title">
-            <h3 class="pre-title">{{courses.pretitle}}</h3>
-            <h2 class="title">{{courses.title}}</h2>
+            <h3 class="pre-title">Stimulated to learn?</h3>
+            <h2 class="title">Featured online courses</h2>
           </div>
           <!-- courses list -->
           <ul class="ft-courses-list">
             <!-- course element -->
-            <li v-for="course in courses.list" class="ft-courses-list-el">
+            <li v-for="course in courses" class="ft-courses-list-el">
               <!-- course image -->
               <div class="ft-courses-list-el-img">
                 <img :src="'img/' + course.img + '.jpg'" alt="Course">
@@ -135,41 +135,15 @@
           <!-- program list -->
           <ul class="tutor-program-list">
             <!-- program list-element -->
-            <li class="tutor-program-list-elm">
+            <li v-for="program in programs" class="tutor-program-list-elm">
               <div class="tutor-program-list-elm-img">
-                <img src="img/home-2-image-box-01.png" alt="Program">
+                <img :src="'img/' + program.img + '.png'" :alt="program.name">
               </div>
-              <h4 class="title">Customize Preferences</h4>
+              <h4 class="title">{{program.name}}</h4>
               <p>
-                Learners are given the right to arrange and customize their study schedule and timetable based on preferences.
+                {{program.description}}
               </p>
-              <a href="#" class="link-arrow aft">Start Here</a>
-              </a>
-            </li>
-            <!-- / program list-element -->
-            <!-- program list-element -->
-            <li class="tutor-program-list-elm">
-              <div class="tutor-program-list-elm-img">
-                <img src="img/about-us-02-image-box-02.png" alt="Program">
-              </div>
-              <h4 class="title">Cloud Storage</h4>
-              <p>
-                You can store online lessons via online cloud or download to your device and revise lessons on the way.
-              </p>
-              <a href="#" class="link-arrow aft">Get Free Quote</a>
-              </a>
-            </li>
-            <!-- / program list-element -->
-            <!-- program list-element -->
-            <li class="tutor-program-list-elm">
-              <div class="tutor-program-list-elm-img">
-                <img src="img/home-2-image-box-03.png" alt="Program">
-              </div>
-              <h4 class="title">Multimedia channels</h4>
-              <p>
-                We provide study materials with various formats: video, audio, slides, doc, prints, books and applications.
-              </p>
-              <a href="#" class="link-arrow aft">Start Now</a>
+              <a href="#" class="link-arrow aft">{{program.link}}</a>
               </a>
             </li>
             <!-- / program list-element -->
@@ -183,7 +157,7 @@
         <div class="rounded-border-effect">
           <div class="container">
             <div class="primary-sct-images">
-              <img src="img/home-2-popup-video-poster.jpg" class="primary-cover-img rounded" alt="Companionship">
+              <img :src="'img/' + videospace.img + '.jpg'" class="primary-cover-img rounded" alt="Companionship">
               <img src="img/icon-youtube-play.png" class="play-button" alt="Play video">
             </div>
             <div class="primary-sct-description">
@@ -210,52 +184,18 @@
             <!-- list -->
             <ul class="review-slider-list">
               <!-- element -->
-              <li class="review-slider-list-elm">
+              <li v-for="review in reviews" class="review-slider-list-elm">
                 <h4 class="title">
-                  The MaxCoach team works really hard to ensure high quality
+                  {{review.title}}
                 </h4>
                 <p>
-                  I am happy with their arrangement of lessons and subjects. They reflect a scientific  investigation into effective methods to be adopted for learners of all levels.
+                  {{review.description}}
                 </p>
                 <div class="review-slider-list-elm-user">
-                  <img src="img/testimonial-avata-01.jpg" class="circled" alt="Review">
+                  <img :src="'img/testimonial-avata-' + review.user.img + '.jpg'" class="circled" alt="Review">
                   <div class="data">
-                    <h2>Luvic Dubble</h2>
-                    <span>/ Private Tutor</span>
-                  </div>
-                </div>
-              </li>
-              <!--/ element -->
-              <!-- element -->
-              <li class="review-slider-list-elm">
-                <h4 class="title">
-                  The MaxCoach team works really hard to ensure high quality
-                </h4>
-                <p>
-                  I am happy with their arrangement of lessons and subjects. They reflect a scientific  investigation into effective methods to be adopted for learners of all levels.
-                </p>
-                <div class="review-slider-list-elm-user">
-                  <img src="img/testimonial-avata-01.jpg" class="circled" alt="Review">
-                  <div class="data">
-                    <h2>Luvic Dubble</h2>
-                    <span>/ Private Tutor</span>
-                  </div>
-                </div>
-              </li>
-              <!--/ element -->
-              <!-- element -->
-              <li class="review-slider-list-elm">
-                <h4 class="title">
-                  The MaxCoach team works really hard to ensure high quality
-                </h4>
-                <p>
-                  I am happy with their arrangement of lessons and subjects. They reflect a scientific  investigation into effective methods to be adopted for learners of all levels.
-                </p>
-                <div class="review-slider-list-elm-user">
-                  <img src="img/testimonial-avata-01.jpg" class="circled" alt="Review">
-                  <div class="data">
-                    <h2>Luvic Dubble</h2>
-                    <span>/ Private Tutor</span>
+                    <h2>{{review.user.name}}</h2>
+                    <span>/ {{review.user.profession}}</span>
                   </div>
                 </div>
               </li>
@@ -264,10 +204,7 @@
             <!-- / list -->
             <!-- slider navbar -->
             <ul class="review-slider-nav">
-              <li class="circled"></li>
-              <li class="circled"></li>
-              <li class="circled"></li>
-              <li class="circled"></li>
+              <li v-for="li in reviews" class="circled"></li>
             </ul>
             <!-- / slider navbar -->
           </div>
@@ -290,31 +227,10 @@
           <!-- list -->
           <ul class="numbers-list">
             <!-- element -->
-            <li class="numbers-list-elm">
-              <h2 class="title">Successfully trained</h2>
-              <div class="txt-evd">1790</div>
-              <div class="description">Enrolled learners</div>
-            </li>
-            <!-- / element -->
-            <!-- element -->
-            <li class="numbers-list-elm">
-              <h2 class="title">Proudly Received</h2>
-              <div class="txt-evd">19</div>
-              <div class="description">Countrywide awards</div>
-            </li>
-            <!-- / element -->
-            <!-- element -->
-            <li class="numbers-list-elm">
-              <h2 class="title">Firmly Established</h2>
-              <div class="txt-evd">24</div>
-              <div class="description">Local branches</div>
-            </li>
-            <!-- / element -->
-            <!-- element -->
-            <li class="numbers-list-elm">
-              <h2 class="title">Successfully trained</h2>
-              <div class="txt-evd">1090</div>
-              <div class="description">Blog posts</div>
+            <li v-for="stat in stats" class="numbers-list-elm">
+              <h2 class="title">{{stat.title}}</h2>
+              <div class="txt-evd">{{stat.value}}</div>
+              <div class="description">{{stat.obj}}</div>
             </li>
             <!-- / element -->
           </ul>
@@ -331,29 +247,21 @@
               <h2 class="title">Most Viewed <span class="txt-evd">Best Blogs</span>.</h2>
             </div>
             <ul>
-              <li class="link-arrow bfr">Become a Better Blogger: Content Planning</li>
-              <li class="link-arrow bfr">Promoting Your Online Business on Pinterest</li>
-              <li class="link-arrow bfr">Gamification and Game-Based Learning</li>
-              <li class="link-arrow bfr">Designing an Online Course from Expert’s Perspective</li>
-              <li class="link-arrow bfr">Why Online Courses Are the Future of Education</li>
+              <li v-for="link in blogs.nav" class="link-arrow bfr">{{link}}</li>
           </div>
+          <!-- blog list -->
           <ul class="most-viewed-list">
-            <li class="most-viewed-list-el">
-              <img src="img/artist-blog-03-480x352.jpeg" alt="">
+            <!-- element -->
+            <li v-for="blog in blogs.list" class="most-viewed-list-el">
+              <img :src="'img/' + blog.img" alt="Blog">
               <div class="data">
-                <h3 class="pre-title">Business</h3>
-                <h2 class="title">Ten Benefits Of Rentals That May Change Your Perspective</h2>
+                <h3 class="pre-title">{{blog.type}}</h3>
+                <h2 class="title">{{blog.title}}</h2>
               </div>
             </li>
-            <li class="most-viewed-list-el">
-              <img src="img/artist-blog-03-480x352.jpeg" alt="">
-              <div class="data">
-                <h3 class="pre-title">Business</h3>
-                <h2 class="title">Ten Benefits Of Rentals That May Change Your Perspective</h2>
-              </div>
-            </li>
-
+            <!-- / element -->
           </ul>
+          <!-- / blog list -->
         </div>
       </section>
       <!-- / Most Viewed section -->
@@ -390,11 +298,7 @@
                 support@maxcoach.com
               </p>
               <div class="social-ico">
-                <a href="#" class="fa fa-twitter" aria-hidden="true"></a>
-                <a href="#" class="fa fa-facebook" aria-hidden="true"></a>
-                <a href="#" class="fa fa-instagram" aria-hidden="true"></a>
-                <a href="#" class="fa fa-youtube-play" aria-hidden="true"></a>
-                <a href="#" class="fa fa-linkedin" aria-hidden="true"></a>
+                <a v-for="social in socials" :href="social.url" :class="'fa fa-' + social.ico" aria-hidden="true"></a>
               </div>
             </div>
             <nav class="footer-col-menu">
