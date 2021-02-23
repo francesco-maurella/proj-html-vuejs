@@ -19,7 +19,7 @@
 }
 
 .button {
-  background-color: #1FAD96;
+  background-color: #ef6f31;
   color: #FFFFFF;
   display: inline-block;
   margin: 15px 0;
@@ -67,7 +67,7 @@
 }
 
 .txt-evd {
-  color: #1FAD96;
+  color: #ef6f31;
   font-weight: 400;
 }
 
@@ -84,7 +84,7 @@
 }
 .wrapper a:hover {
   text-decoration: underline;
-  color: #1FAD96;
+  color: #ef6f31;
 }
 .wrapper li {
   list-style: none;
@@ -160,13 +160,13 @@
   justify-content: center;
   width: 35px;
   height: 100%;
-  color: #1FAD96;
+  color: #ef6f31;
   position: absolute;
   right: 0;
   cursor: pointer;
 }
 .top-bar-menu-user > li:last-child .fa-search:hover {
-  background-color: #1FAD96;
+  background-color: #ef6f31;
   color: #FFFFFF;
 }
 
@@ -293,7 +293,7 @@ main {
 }
 .ft-courses-list-el-data .price {
   font-size: 1.55em;
-  color: #1FAD96;
+  color: #ef6f31;
   font-weight: bolder;
 }
 .ft-courses-list-el-data .price .txt-xs {
@@ -366,7 +366,7 @@ main {
   transform: scale(1.2);
 }
 #videospace .link-arrow {
-  color: #1FAD96;
+  color: #ef6f31;
 }
 
 .review {
